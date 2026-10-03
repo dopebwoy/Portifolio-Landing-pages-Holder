@@ -1,12 +1,21 @@
 
-/*my style, me severien 👌
-/* Navbar Styling */
+/*my style, me severien 👌*/
+
 .navbar {
     background-color: #333;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.theme-toggle {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
 }
 
 .nav-container {
@@ -67,8 +76,9 @@ img{
     max-width: fit-content;
     border-radius: 45%;
     height: 170px;
-    min-width: 150px;
+    min-width: 120px;
     box-shadow: 10px 2px 30px 4px rgba(3, 3, 3,.3); 
+    
 }
 .portfolio-header .subtitle {
     font-size: 1.1rem;
@@ -111,7 +121,55 @@ img{
     margin-bottom: 0.5rem;
 }
 
-/* Footer */
+.contact-card {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+}
+
+.contact-card h2 {
+    color: #333;
+    margin: 0 0 0.75rem;
+}
+
+.contact-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    background-color: #388e3c;
+}
+
+.dark-mode .contact-card {
+    background-color: #252525;
+}
+
+.dark-mode .contact-card h2 {
+    color: #f2f2f2;
+}
+
+.dark-mode .contact-card p {
+    color: #c5c5c5;
+}
+
 footer {
     background-color: #f0f0f0;
     text-align: center;
@@ -125,7 +183,41 @@ footer p {
     margin: 0;
 }
 
-/* Responsive Design */
+body {
+    transition: background-color 0.2s, color 0.2s;
+}
+
+body.dark-mode {
+    background-color: #171717;
+    color: #f2f2f2;
+}
+
+.dark-mode .portfolio-header {
+    border-bottom-color: #444;
+}
+
+.dark-mode .portfolio-header h1,
+.dark-mode .content-section h2 {
+    color: #f2f2f2;
+}
+
+.dark-mode .portfolio-header .subtitle,
+.dark-mode .content-section p,
+.dark-mode .content-section ul {
+    color: #c5c5c5;
+}
+
+.dark-mode .content-section {
+    background-color: #252525;
+}
+
+.dark-mode footer {
+    background-color: #222;
+    border-top-color: #444;
+    color: #c5c5c5;
+}
+
+/* respo */
 @media (max-width: 768px) {
     .nav-menu {
         gap: 1rem;
